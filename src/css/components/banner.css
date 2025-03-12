@@ -1,0 +1,95 @@
+.banner {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    max-width: 380px; /* Largura máxima do banner */
+    margin: 20px auto; /* Centraliza o banner na página */
+    position: relative;
+    overflow: hidden;
+}
+
+.banner__container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    flex: 0 0 100%; /* Impede que os cards se ajustem ao tamanho do contêiner */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Efeito de levantar o card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.card.active {
+    opacity: 1; /* Card ativo fica totalmente visível */
+    transform: scale(1.05); /* Efeito de destaque */
+}
+
+.card h3 {
+    font-size: 24px; /* Tamanho do título */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+    color: #333; /* Cor do título */
+}
+
+.card p {
+    font-size: 16px; /* Tamanho da descrição */
+    color: #666; /* Cor da descrição */
+    margin-bottom: 20px; /* Espaçamento abaixo da descrição */
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button.prev {
+    left: 10px;
+}
+
+.nav-button.next {
+    right: 10px;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .card {
+        width: calc(50% - 20px); /* 2 cards por linha em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        max-width: 90%; /* Ajusta a largura do banner em telas menores */
+    }
+
+    .card {
+        width: 100%; /* 1 card por linha em celulares */
+        margin: 10px 0; /* Reduz a margem entre os cards */
+    }
+
+    .nav-button {
+        font-size: 20px; /* Reduz o tamanho dos botões em telas menores */
+        padding: 8px;
+    }
+}

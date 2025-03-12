@@ -1,0 +1,16 @@
+.footer {
+    color: var(--white--900);
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    display: flex;
+    font-family: "Lora", serif;
+    padding: 30px;
+    border-top: var(--border);
+}
+
+.footer a {
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+}

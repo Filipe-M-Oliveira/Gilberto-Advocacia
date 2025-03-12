@@ -1,0 +1,35 @@
+header {
+    background-color: var(--white--900);
+    font-family: "Lora", serif;
+}
+
+header img {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+header h1 {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: var(--red--900);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.header__atuacao {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    color: var(--red--900);
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.header__atuacao li {
+    margin: 20px;
+    display:inline-block;
+    text-decoration: underline;
+}

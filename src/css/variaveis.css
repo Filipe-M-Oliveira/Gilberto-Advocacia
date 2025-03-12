@@ -1,0 +1,7 @@
+:root {
+    --red--900: rgb(149, 17, 17);
+    --white--900: rgb(255, 255, 255);
+    --grey--100: rgb(210, 210, 210);
+    --border-radius: 8px;
+    --border: 1px solid var(--grey--100);
+}
